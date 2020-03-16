@@ -11,12 +11,32 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello, World")
-                .foregroundColor(Color.blue)
-                .bold()
-            Text("rrr")
-            Text("rrrrrrrrrr")
+            MapView()
+                .frame(height: 300)
+                .edgesIgnoringSafeArea(.top)
+            
+            circle_image()
+                .offset(y:-130)
+                .padding(.bottom,-130)
+            
+            VStack(alignment: .leading){
+                Text("Turtle Rock")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.black)
+
+                HStack{
+                    Text("Joshua")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("what?")
+                        .font(.subheadline)
+                }
+            }
+            .padding()
+            
+            Spacer()
         }
+    
         
     }
 }
@@ -45,6 +65,6 @@ struct ContentViews: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentViews()
+        ContentView()
     }
 }
